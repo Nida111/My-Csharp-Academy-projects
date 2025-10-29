@@ -69,7 +69,7 @@ public static class UserInput
         }
         else
         {
-            Console.WriteLine("Please write y or n. I didn't understood");
+            Console.WriteLine("invalid input. Please enter y or n");
              return ContinueGameOrNot();
         }
         
