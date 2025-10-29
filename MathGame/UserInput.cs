@@ -18,7 +18,9 @@ public static class UserInput
     //This method is used for menu selection
     public static string MenuSelection()
     {
-        Console.WriteLine("What would you like   to play? Choose from the menu: \n A - Addition \n S - Subtraction \n M - Multiplication \n D - Division \n Q - Quit \n H - History \n" );
+        Console.WriteLine("What would you like to play?"+
+                          "Choose from the menu: \n A - Addition \n S - Subtraction \n M - Multiplication \n D - Division \n" +
+                          " Q - Quit \n H - History \n" );
         string? optionSelected = Console.ReadLine();
         while (optionSelected == null)
         {
@@ -71,9 +73,8 @@ public static class UserInput
              return ContinueGameOrNot();
         }
         
-    }
-    
-    public static void ShowResults(List<Result> history )
+    } 
+    public static void ShowResults(List<Result> history)
     {
         foreach (var entry in history)
             Console.WriteLine($"\nIn game {entry.Operation} you got {entry.Points} points " );

@@ -3,20 +3,15 @@ namespace MathGame;
 public class Game
 {
     public Result PlayGame(string gameName)
-    { 
-        switch (gameName)
+    {
+        return gameName switch
         {
-            case "a":
-                return AdditionGame();
-            case "s" :
-                return SubtractionGame();
-            case "m" :
-                return MultiplicationGame();
-            case "d":
-                return DivisionGame();
-            default:
-                throw new ArgumentException("Unknown Game");
-        }
+            "a" => AdditionGame(),
+            "s" => SubtractionGame(),
+            "m" => MultiplicationGame(),
+            "d" => DivisionGame(),
+            _ => throw new ArgumentException("Unknown game")
+        };
 
     }
     
@@ -38,7 +33,7 @@ public class Game
                     Console.WriteLine("The answer cannot be empty.");
                     userInput = Console.ReadLine();
                 }
-                int validatedInput = InputValidation(userInput);
+                int? validatedInput = InputValidation(userInput);
                 if (result == validatedInput)
                 {
                     Console.WriteLine("Good job. The answer is correct. You got 2 points\n");
@@ -51,8 +46,7 @@ public class Game
                 
             }
             Console.WriteLine($"You got {gamePoints} points");
-            Result additionResult = new Result("Addition", gamePoints);
-            return additionResult;
+            return new Result("Addition", gamePoints);
             
         }
 
@@ -75,7 +69,7 @@ public class Game
                 userInput = Console.ReadLine();
             }
 
-            int validatedInput = InputValidation(userInput);
+            int? validatedInput = InputValidation(userInput);
             if (result == validatedInput)
             {
                 Console.WriteLine("Good job. The answer is correct. You got 2 points\n");
@@ -89,8 +83,7 @@ public class Game
         }
 
         Console.WriteLine($"You got {gamePoints} points");
-        Result subtractionResult = new Result("Subtraction", gamePoints);
-        return subtractionResult;
+        return new Result("Subtraction", gamePoints);
     }
 
     private Result MultiplicationGame()
@@ -111,7 +104,7 @@ public class Game
                     Console.WriteLine("The answer cannot be empty.");
                     userInput = Console.ReadLine();
                 }
-                int validatedInput = InputValidation(userInput);
+                int? validatedInput = InputValidation(userInput);
                 if (result == validatedInput)
                 {
                     Console.WriteLine(" Good job. The answer is correct. You got 2 points");
@@ -123,8 +116,7 @@ public class Game
                 }
             }
             Console.WriteLine($"You got {gamePoints} points");
-            Result multiplyResult = new Result("Multiplication", gamePoints);
-            return multiplyResult;
+            return new Result("Multiplication", gamePoints);
         }
 
         private Result DivisionGame()
@@ -154,7 +146,7 @@ public class Game
                     Console.WriteLine("The answer cannot be empty.");
                     userInput = Console.ReadLine();
                 }
-                int validatedInput = InputValidation(userInput);
+                int? validatedInput = InputValidation(userInput);
                 if (result == validatedInput)
                 {
                     Console.WriteLine(" Good job. The answer is correct. You got 2 points");
@@ -171,21 +163,15 @@ public class Game
             
         }
         
-        private  int InputValidation(string input)
+        private int? InputValidation(string input)
         {
             input = input.Trim();
-            int validInput = 0;
             bool success = int.TryParse(input, out int number);
             if (success)
             {
-                validInput= number;
+               return number;
             }
-            else
-            {
-                Console.WriteLine("your answer is in correct. U ot zero points ");
-                    
-            }
-            return validInput;
+            return null;
         }
 
 
