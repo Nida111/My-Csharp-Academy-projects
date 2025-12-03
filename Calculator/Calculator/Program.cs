@@ -78,6 +78,8 @@ class Program
 
             Console.WriteLine("\n"); // Friendly linespacing.
         }
+
+        Guid guid = Guid.CreateVersion7()
         return;
     }
 }

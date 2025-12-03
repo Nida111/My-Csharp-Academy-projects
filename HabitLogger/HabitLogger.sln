@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitLogger.Infrastructure", "HabitLogger.Infrastructure\HabitLogger.Infrastructure.csproj", "{ABAE9B9C-26CD-4ECB-8EC6-5BBBD1A61131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitLogger.UI", "HabitLogger.UI\HabitLogger.UI.csproj", "{478F14A3-E3B7-4FFF-AEFD-7F4199BE3FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitLogger.Domain", "HabitLogger.Domain\HabitLogger.Domain.csproj", "{12380D07-B693-45EB-8484-3C6E1013D0D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABAE9B9C-26CD-4ECB-8EC6-5BBBD1A61131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAE9B9C-26CD-4ECB-8EC6-5BBBD1A61131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAE9B9C-26CD-4ECB-8EC6-5BBBD1A61131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAE9B9C-26CD-4ECB-8EC6-5BBBD1A61131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{478F14A3-E3B7-4FFF-AEFD-7F4199BE3FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478F14A3-E3B7-4FFF-AEFD-7F4199BE3FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478F14A3-E3B7-4FFF-AEFD-7F4199BE3FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478F14A3-E3B7-4FFF-AEFD-7F4199BE3FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12380D07-B693-45EB-8484-3C6E1013D0D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12380D07-B693-45EB-8484-3C6E1013D0D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12380D07-B693-45EB-8484-3C6E1013D0D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12380D07-B693-45EB-8484-3C6E1013D0D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
