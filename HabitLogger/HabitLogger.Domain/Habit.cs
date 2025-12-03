@@ -1,7 +1,8 @@
 namespace HabitLogger.Domain;
 
-public class User
+public class Habit
 {
-    public int  Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
+
 }
