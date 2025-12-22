@@ -160,7 +160,7 @@ class Program
             
             else if (menuSelection == "b")  //////////////////////// View Habits
             {
-                List<UserHabit> userHabitsList = userHabitRepository.Get(user.Id);
+                List<UserHabit> userHabitsList = userHabitRepository.GetAllUserId(user.Id);
                 var index = 1;
                 var table = new ConsoleTable("No", "Habit", "Date", "Unit", "Quantity");
                 foreach (var ub in userHabitsList)
@@ -174,7 +174,7 @@ class Program
             }
             else if (menuSelection == "d")    //////////////////////// delete habit
             {
-                List<UserHabit> userHabitsList = userHabitRepository.Get(user.Id);
+                List<UserHabit> userHabitsList = userHabitRepository.GetAllUserId(user.Id);
                 var index = 1;
                 var table = new ConsoleTable("No", "Habit", "Date", "Unit", "Quantity");
                 foreach (var ub in userHabitsList)
@@ -207,7 +207,7 @@ class Program
             
             else if (menuSelection == "c")      //////////////////////// update habit
             {
-                List<UserHabit> userHabitsList = userHabitRepository.Get(user.Id);
+                List<UserHabit> userHabitsList = userHabitRepository.GetAllUserId(user.Id);
                 var index = 1;
                 var table = new ConsoleTable("No", "Habit", "Date", "Unit", "Quantity");
                 foreach (var ub in userHabitsList)

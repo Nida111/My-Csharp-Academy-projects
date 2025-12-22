@@ -21,7 +21,7 @@ public class UserHabitRepository
     }
     
     
-    public List<UserHabit> Get(int userId)
+    public List<UserHabit> GetAllUserId(int userId) 
     {
         //Establish a connection with the database
         using var connection = new SqliteConnection("Data Source=habit.db");
